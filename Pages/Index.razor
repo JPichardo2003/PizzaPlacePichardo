@@ -110,6 +110,10 @@
 
     private void RealizarOrden()
     {
-        Console.WriteLine("Orden Realizada");
+        if (!string.IsNullOrEmpty(estado.Cesta.Cliente.Nombre) && !string.IsNullOrEmpty(estado.Cesta.Cliente.Ciudad)
+            && !string.IsNullOrEmpty(estado.Cesta.Cliente.Calle))
+            Console.WriteLine("Orden Realizada");
+        else
+            Console.WriteLine("Debe Completar los datos para realizar la orden");
     }
 }
