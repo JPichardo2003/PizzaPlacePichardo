@@ -8,13 +8,13 @@
         <div class="col">
             @pizza.Nombre
         </div>
-        <div class="col text-right">@($"{pizza.Precio:0.00}")</div>
+        <div class="col text-right">@($"${pizza.Precio:0.00}")</div>
         <div class="col">
             <img src="@PicanteImagenes(pizza.Picante)" alt="@pizza.Picante" />
         </div>
         <div class="col">
             <button class="btn btn-success pl-4 pr-4"
-            @onclick="@(() => AgregarCesta(pizza))">Add</button>
+            @onclick="@(() => AgregarCesta(pizza))">Añadir</button>
         </div>
     </div>
 }
@@ -31,15 +31,13 @@
                 @pizza?.Nombre
             </div>
             <div class="col text-right">
-                @($"{pizza?.Precio:0.00}")
+                @($"${pizza?.Precio:0.00}")
             </div>
             <div class="col"></div>
             <div class="col"></div>
             <div class="col">
                 <button class="btn btn-danger"
-                @onclick="@(() => RemoverCesta(pos))">
-                    remove
-                </button>
+                @onclick="@(() => RemoverCesta(pos))">remover</button>
             </div>
         </div>
     }
@@ -52,7 +50,7 @@
     <div class="row">
         <div class="col"> total:</div>
         <div class="col text-right font-weight-bold">
-            @($"{estado.PrecioTotal:0.00}")
+            @($"${estado.PrecioTotal:0.00}")
         </div>
         <div class="col"> </div>
         <div class="col"> </div>
